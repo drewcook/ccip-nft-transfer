@@ -3,16 +3,14 @@ src = 'src'
 out = 'out'
 libs = ['node_modules', 'lib']
 remappings = [
-    '@chainlink/contracts/=node_modules/@chainlink/contracts',
-    '@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip',
+    '@chainlink/contracts-ccip/=lib/ccip/contracts/',
+    '@chainlink/contracts/=lib/chainlink/contracts/',
+    '@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/'
 ]
-solc = '0.8.19'
+solc = '0.8.23'
 
 [rpc_endpoints]
-ethereumSepolia = "${ETHEREUM_SEPOLIA_RPC_URL}"
-optimismGoerli = "${OPTIMISM_GOERLI_RPC_URL}"
-avalancheFuji = "${AVALANCHE_FUJI_RPC_URL}"
-arbitrumTestnet = "${ARBITRUM_TESTNET_RPC_URL}"
-polygonMumbai = "${POLYGON_MUMBAI_RPC_URL}"
+ethereumSepolia = "${ALCHEMY_SEPOLIA_RPC_URL}"
+arbitrumSepolia = "${ALCHEMY_ARBITRUM_SEPOLIA_RPC_URL}"
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
